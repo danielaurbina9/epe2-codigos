@@ -1,0 +1,45 @@
+
+<?php
+require ("conexion.php");
+$status = "";
+$con=conectar();
+
+?>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Listado de datos</title>
+</head>
+  <h1>   Bienvenido al Listado </h1>
+<body>
+<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+	<link rel="stylesheet" href="estiloss.css">
+
+	
+		<br>
+		<table>
+			<tr>
+				<td> password</td>
+				<td>  Usuarios</td>
+			</tr>
+			
+			<?php 
+			$sql= "SELECT * FROM ingr";
+			$result=mysql_query($con,$ql);
+			
+			while($mostrar=mysql_fetch_array($result)){
+			}
+			?>
+			
+			<tr>
+				<td><?php echo $mostrar['password'] ?></td>
+			<td><?php echo $mostrar['usuario'] ?></td>
+			</tr>
+		<?php 
+	}
+	 ?>
+	</table>	
+</body>
+</html>
